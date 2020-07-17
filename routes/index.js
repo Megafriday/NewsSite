@@ -21,6 +21,8 @@ router.get('/', function (req, res, next) {
 		// gnews.geo('New York', config),
 		gnews.topic('HEALTH', config),
 		gnews.search('N国', config),
+		gnews.search('RIZIN', config),
+		gnews.search('情報処理技術者試験', config),
 	]).then(results => {
 		// console.log(results)
 		res.render('index', { results });
