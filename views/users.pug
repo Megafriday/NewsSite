@@ -1,0 +1,6 @@
+extend layout
+
+block content
+	ul
+	each health in healths
+		li: a(href=health.link target='_blank')=health.title
