@@ -1,12 +1,7 @@
 const gnews = require('gnews');
 var express = require('express');
 var router = express.Router();
-
-const config = {
-	country: 'jp',
-	language: 'ja',
-	n: 5
-};
+const { config } = require('../utiles/util.js');
 
 /* GET users listing. */
 router.get('/', function (req, res, next) {
