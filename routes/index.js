@@ -9,13 +9,13 @@ router.get('/', function (req, res, next) {
 
 	Promise.all([
 		gnews.headlines(config),
-		gnews.topic('WORLD', config),
+		// gnews.topic('WORLD', config),
 		// gnews.topic('BUSINESS', config),
 		// gnews.topic('TECHNOLOGY', config),
 		// gnews.topic('ENTERTAINMENT', config),
 		// gnews.topic('SPORTS', config),
 		gnews.topic('HEALTH', config),
-		gnews.geo('New York', config),
+		// gnews.geo('New York', config),
 		// gnews.search('N国', config),
 		// gnews.search('RIZIN', config),
 		// gnews.search('情報処理技術者試験', config),
