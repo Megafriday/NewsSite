@@ -19,6 +19,7 @@ router.get('/', function (req, res, next) {
 		gnews.search('藤沢', config),
 		gnews.search('N国', config),
 		gnews.search('RIZIN', config),
+		gnews.search('K1', config),
 		gnews.search('情報処理技術者試験', config),
 	]).then(results => {
 		// console.log(results)
