@@ -7,6 +7,8 @@ const { config } = require('../utiles/util.js');
 /* GET home page. */
 router.get('/', function (req, res, next) {
 
+	config.n = 10;
+
 	Promise.all([
 		gnews.headlines(config),
 		// gnews.topic('WORLD', config),
@@ -16,15 +18,17 @@ router.get('/', function (req, res, next) {
 		// gnews.topic('SPORTS', config),
 		gnews.topic('HEALTH', config),
 		// gnews.geo('New York', config),
-		gnews.search('藤沢', config),
-		gnews.search('N国', config),
-		gnews.search('RIZIN', config),
-		gnews.search('K1', config),
-		gnews.search('情報処理技術者試験', config),
+		// gnews.search('藤沢', config),
+		// gnews.search('N国', config),
+		// gnews.search('RIZIN', config),
+		// gnews.search('K1', config),
+		// gnews.search('情報処理技術者試験', config),
 	]).then(results => {
 		// console.log(results)
 		res.render('index', { results });
 	});
+
+	config.n = 5;
 
 });
 
