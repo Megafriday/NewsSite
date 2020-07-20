@@ -4,7 +4,7 @@ var router = express.Router();
 const { config } = require('../utiles/util.js');
 
 
-const words = ["藤沢", "N国", "RIZIN", "情報処理技術者試験"];
+const words = ["藤沢", "N国", "RIZIN", "K1", "情報処理技術者試験"];
 
 
 /* GET home page. */
@@ -14,7 +14,7 @@ router.get('/', function (req, res, next) {
 		.all(words.map(getGNews))
 		.then(results => {
 			// console.log(results)
-			res.render('search', { results });
+			res.render('search', { results, words });
 		});
 
 });

@@ -1,8 +1,10 @@
 extends layout
 
 block content
+	- var i=0
 	each result in results
 		hr
+		div=words[i++]
 		ul
-			each item in result
-				li: a(href=item.link target='_blank')=item.title
+		each item in result
+			li: a(href=item.link target='_blank')=item.title

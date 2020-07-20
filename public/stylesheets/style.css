@@ -1,3 +1,7 @@
 body {
   font: 20px verdana, sans-serif;
 }
+
+ul {
+	margin: 0;
+}
