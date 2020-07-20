@@ -1,8 +1,13 @@
 doctype html
 html
 	head
-		title= title
+		title ニュースサイト
 		link(rel='stylesheet' href='/stylesheets/style.css')
 		link(rel="shortcut icon" href="/images/favicon.png" type="image/x-icon")
 	body
+		ul.nav
+			li
+				a(href="./") ホームページ
+			li
+				a(href="./search") サーチページ
 		block content

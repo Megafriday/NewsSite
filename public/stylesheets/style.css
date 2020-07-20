@@ -2,6 +2,15 @@ body {
   font: 20px verdana, sans-serif;
 }
 
+.nav {
+	display: flex;
+	list-style-type: none;
+}
+
+.nav li {
+	margin-right: 40px;
+}
+
 ul {
 	margin: 0;
 }
