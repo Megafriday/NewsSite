@@ -7,15 +7,13 @@ const { config } = require('../utiles/util.js');
 /* GET home page. */
 router.get('/', function (req, res, next) {
 
-	config.n = 10;
-
 	Promise.all([
 		gnews.headlines(config),
-		// gnews.topic('WORLD', config),
-		// gnews.topic('BUSINESS', config),
-		// gnews.topic('TECHNOLOGY', config),
-		// gnews.topic('ENTERTAINMENT', config),
-		// gnews.topic('SPORTS', config),
+		gnews.topic('WORLD', config),
+		gnews.topic('BUSINESS', config),
+		gnews.topic('TECHNOLOGY', config),
+		gnews.topic('ENTERTAINMENT', config),
+		gnews.topic('SPORTS', config),
 		gnews.topic('HEALTH', config),
 		// gnews.geo('New York', config),
 		// gnews.search('藤沢', config),
@@ -27,8 +25,6 @@ router.get('/', function (req, res, next) {
 		// console.log(results)
 		res.render('index', { results });
 	});
-
-	config.n = 5;
 
 });
 
